@@ -61,9 +61,7 @@ void display_postorder(TNODE *root)
 /* this does the breadth-first search */
 TNODE *iterative_bf_search(TNODE *root, int val)
 {
-  QUEUE *queue;
-  queue->front = NULL;
-  queue->rear = NULL;
+  QUEUE *queue = (QUEUE *)malloc(sizeof(QUEUE));
   TNODE *node = root;
   while (node != NULL)
   {
@@ -87,8 +85,7 @@ TNODE *iterative_bf_search(TNODE *root, int val)
 /* this does the depth-first search */
 TNODE *iterative_df_search(TNODE *root, int val)
 {
-  STACK *stack;
-  stack->top = NULL;
+  STACK *stack = {0};
   TNODE *node = root;
   while (node != NULL)
   {

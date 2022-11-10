@@ -50,8 +50,6 @@ int main()
   printf("\n%s:", "display_postorde()");
   display_postorder(root);
 
-  display_tree(root, 0);
-
   printf("\n%s:", "display_inorder()");
   display_inorder(root);
 
